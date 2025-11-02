@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行政法務業務統合 提案整理レポート（ドラフト）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            margin: -10px -10px 25px -10px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .info-box p {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        tr:hover {
+            background: #e3f2fd;
+            transition: background 0.3s;
+        }
+        
+        .highlight-positive {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .highlight-negative {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        .highlight-neutral {
+            color: #ffc107;
+            font-weight: bold;
+        }
+        
+        .calculation {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        
+        .evaluation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .eval-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        .eval-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .eval-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .eval-rating {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        
+        .conclusion-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .conclusion-box h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .conclusion-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .conclusion-box li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .conclusion-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .note {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .arrow {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>行政法務業務統合 提案整理レポート（ドラフト）</h1>
+        </header>
+        
+        <div class="content">
+            <!-- Ⅰ. 前提条件と提案概要 -->
+            <div class="section">
+                <div class="section-title">Ⅰ．前提条件と提案概要</div>
+                
+                <div class="info-box">
+                    <h3>提案元</h3>
+                    <p>株式会社ニューオ（以下「ニューオ」）</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>契約形態</h3>
+                    <p>専属業務委託契約（行政書士業務）</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>固定報酬</h3>
+                    <p>月額<strong>50万円</strong>（半年後見直し可）</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>成果報酬</h3>
+                    <p><strong>民泊申請：</strong>報酬総額20万円（調査費5万円含む）</p>
+                    <p><strong>旅館業申請：</strong>報酬総額40万円（調査費8万円含む）</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>分配ルール</h3>
+                    <ul style="list-style: disc; padding-left: 25px;">
+                        <li>調査費部分は<span class="highlight-positive">100％先生取り分</span>（ニューオ取り分なし）</li>
+                        <li>申請報酬部分（残額）については、<strong>先生30％／ニューオ70％</strong></li>
+                        <li>調査止まり案件（未申請案件）：8万円を<span class="highlight-positive">先生100％取り分</span>とし、ニューオは取り分なし</li>
+                        <li>請求・回収・営業対応はニューオが一括担当</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Ⅱ. 報酬・待遇条件 -->
+            <div class="section">
+                <div class="section-title">Ⅱ．報酬・待遇条件（正確構造）</div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>区分</th>
+                            <th>総額</th>
+                            <th>構成</th>
+                            <th>先生取り分</th>
+                            <th>ニューオ取り分</th>
+                            <th>先生比率</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>民泊申請</strong></td>
+                            <td>20万円</td>
+                            <td>調査費5万＋申請報酬15万</td>
+                            <td class="highlight-positive">調査費5万＋申請報酬15万×30％＝9.5万円</td>
+                            <td>申請報酬15万×70％＝10.5万円</td>
+                            <td>約47.5％</td>
+                        </tr>
+                        <tr>
+                            <td><strong>旅館業申請</strong></td>
+                            <td>40万円</td>
+                            <td>調査費8万＋申請報酬32万</td>
+                            <td class="highlight-positive">調査費8万＋申請報酬32万×30％＝17.6万円</td>
+                            <td>申請報酬32万×70％＝22.4万円</td>
+                            <td>約44％</td>
+                        </tr>
+                        <tr>
+                            <td><strong>調査止まり案件</strong></td>
+                            <td>8万円</td>
+                            <td>調査費のみ</td>
+                            <td class="highlight-positive">8万円（100％）</td>
+                            <td>0円</td>
+                            <td>100％</td>
+                        </tr>
+                        <tr>
+                            <td><strong>固定報酬</strong></td>
+                            <td>-</td>
+                            <td>月額固定</td>
+                            <td class="highlight-positive">50万円（100％）</td>
+                            <td>0円</td>
+                            <td>100％</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="calculation">
+                    <span class="arrow">➡</span> 先生の取り分は「固定報酬＋調査費＋申請報酬30％」。ニューオは申請報酬部分の70％を取得。
+                </div>
+            </div>
+            
+            <!-- Ⅲ. 現状との比較 -->
+            <div class="section">
+                <div class="section-title">Ⅲ．現状との比較（単価・収益面）</div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>区分</th>
+                            <th>現状単価</th>
+                            <th>提案単価</th>
+                            <th>現状取り分</th>
+                            <th>提案後取り分</th>
+                            <th>備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>民泊申請</strong></td>
+                            <td>15万円</td>
+                            <td class="highlight-positive">20万円</td>
+                            <td>15万円（全額）</td>
+                            <td class="highlight-negative">9.5万円</td>
+                            <td>単価上昇＋分配発生で若干減</td>
+                        </tr>
+                        <tr>
+                            <td><strong>旅館業申請</strong></td>
+                            <td>25万円</td>
+                            <td class="highlight-positive">40万円</td>
+                            <td>25万円（全額）</td>
+                            <td class="highlight-negative">17.6万円</td>
+                            <td>同上</td>
+                        </tr>
+                        <tr>
+                            <td><strong>調査止まり</strong></td>
+                            <td>未回収</td>
+                            <td class="highlight-positive">8万円</td>
+                            <td>0円</td>
+                            <td class="highlight-positive">8万円</td>
+                            <td>回収安定化</td>
+                        </tr>
+                        <tr>
+                            <td><strong>固定報酬</strong></td>
+                            <td>なし</td>
+                            <td class="highlight-positive">50万円</td>
+                            <td>0円</td>
+                            <td class="highlight-positive">50万円</td>
+                            <td>安定報酬として上乗せ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="calculation">
+                    <span class="arrow">➡</span> 単価配分で減収部分はあるが、固定報酬＋調査費回収で実質は月＋4〜5％増収。
+                </div>
+            </div>
+            
+            <!-- Ⅳ. 業務負担と時間削減効果 -->
+            <div class="section">
+                <div class="section-title">Ⅳ．業務負担と時間削減効果</div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>工程</th>
+                            <th>現状負担</th>
+                            <th>提案後</th>
+                            <th>削減効果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>顧客対応・見積</strong></td>
+                            <td>先生</td>
+                            <td>ニューオ営業担当</td>
+                            <td class="highlight-positive">約100％削減</td>
+                        </tr>
+                        <tr>
+                            <td><strong>資料収集・登記取得</strong></td>
+                            <td>先生</td>
+                            <td>ニューオ事務補助</td>
+                            <td class="highlight-positive">約80％削減</td>
+                        </tr>
+                        <tr>
+                            <td><strong>現地調査・法令判断</strong></td>
+                            <td>先生</td>
+                            <td>継続（先生担当）</td>
+                            <td class="highlight-neutral">削減なし</td>
+                        </tr>
+                        <tr>
+                            <td><strong>書類作成</strong></td>
+                            <td>先生</td>
+                            <td>添付資料補助あり</td>
+                            <td class="highlight-positive">約15％削減</td>
+                        </tr>
+                        <tr>
+                            <td><strong>請求・入金管理</strong></td>
+                            <td>先生</td>
+                            <td>ニューオ経理担当</td>
+                            <td class="highlight-positive">約100％削減</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="calculation">
+                    <span class="arrow">➡</span> 全体で約30〜35％の工数削減（週1日分の余力創出）。
+                </div>
+            </div>
+            
+            <!-- Ⅴ. 責任分担とリスク構造 -->
+            <div class="section">
+                <div class="section-title">Ⅴ．責任分担とリスク構造</div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>担当</th>
+                            <th>責任範囲</th>
+                            <th>コメント</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>行政書士業務の法令遵守</strong></td>
+                            <td class="highlight-negative">先生</td>
+                            <td>申請内容の正確性・行政対応</td>
+                            <td>資格者責任は一貫して先生が負う</td>
+                        </tr>
+                        <tr>
+                            <td><strong>書類不備・補正対応</strong></td>
+                            <td class="highlight-negative">先生</td>
+                            <td>行政との折衝・再提出</td>
+                            <td>実務リスクは変わらず</td>
+                        </tr>
+                        <tr>
+                            <td><strong>顧客との契約トラブル</strong></td>
+                            <td class="highlight-positive">ニューオ</td>
+                            <td>営業・請求・金銭管理責任</td>
+                            <td>先生は直接金銭トラブルに関与しない</td>
+                        </tr>
+                        <tr>
+                            <td><strong>調査結果・報告</strong></td>
+                            <td class="highlight-neutral">共同</td>
+                            <td>実地確認・証拠管理</td>
+                            <td>実務協力体制下での共同責任</td>
+                        </tr>
+                        <tr>
+                            <td><strong>申請不受理・却下</strong></td>
+                            <td class="highlight-negative">先生</td>
+                            <td>法令判断の結果責任</td>
+                            <td>補正・再申請対応は先生主体</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="calculation">
+                    <span class="arrow">➡</span> 法的・専門責任はすべて先生に残る一方で、金銭・顧客管理リスクはニューオが負担。
+                </div>
+            </div>
+            
+            <!-- Ⅵ. 精神的負担・業務満足度の変化 -->
+            <div class="section">
+                <div class="section-title">Ⅵ．精神的負担・業務満足度の変化</div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>現状</th>
+                            <th>提案後</th>
+                            <th>効果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>顧客フィルター</strong></td>
+                            <td>自身で対応</td>
+                            <td>ニューオ営業が選別</td>
+                            <td class="highlight-positive">案件品質安定・対応疲労減少</td>
+                        </tr>
+                        <tr>
+                            <td><strong>請求・入金管理</strong></td>
+                            <td>入金遅延・催促あり</td>
+                            <td>ニューオ経理巻き取り</td>
+                            <td class="highlight-positive">未回収ゼロ・心理的安定</td>
+                        </tr>
+                        <tr>
+                            <td><strong>タスク切替負担</strong></td>
+                            <td>頻発（事務⇄専門業務）</td>
+                            <td>減少</td>
+                            <td class="highlight-positive">集中力向上・業務効率UP</td>
+                        </tr>
+                        <tr>
+                            <td><strong>案件進行管理</strong></td>
+                            <td>個人対応</td>
+                            <td>チーム補助体制</td>
+                            <td class="highlight-positive">可視化・抜け漏れ防止</td>
+                        </tr>
+                        <tr>
+                            <td><strong>全体ストレス</strong></td>
+                            <td>高</td>
+                            <td>低</td>
+                            <td class="highlight-positive">約50〜60％削減体感</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Ⅶ. 処理能力・将来性 -->
+            <div class="section">
+                <div class="section-title">Ⅶ．処理能力・将来性</div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>現状</th>
+                            <th>提案後</th>
+                            <th>コメント</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>月処理件数</strong></td>
+                            <td>約9件（限界）</td>
+                            <td class="highlight-positive">13〜15件（＋50％）</td>
+                            <td>工数削減により拡張余地あり</td>
+                        </tr>
+                        <tr>
+                            <td><strong>実質収益（月）</strong></td>
+                            <td>約185万円</td>
+                            <td class="highlight-positive">約192万円</td>
+                            <td>安定＋微増</td>
+                        </tr>
+                        <tr>
+                            <td><strong>実質取り分比率</strong></td>
+                            <td>先生55％：ニューオ45％</td>
+                            <td>維持</td>
+                            <td>公平構造を維持</td>
+                        </tr>
+                        <tr>
+                            <td><strong>成長余地</strong></td>
+                            <td>限定的</td>
+                            <td class="highlight-positive">案件増により＋60万円/月も可能</td>
+                            <td>拡張性◎</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Ⅷ. 総合評価 -->
+            <div class="section">
+                <div class="section-title">Ⅷ．総合評価（意思決定材料）</div>
+                
+                <div class="evaluation-grid">
+                    <div class="eval-card">
+                        <h4>収益性</h4>
+                        <div class="eval-rating">◎</div>
+                        <p>現状比＋4〜5％、安定報酬50万円が大きい</p>
+                    </div>
+                    
+                    <div class="eval-card">
+                        <h4>業務効率</h4>
+                        <div class="eval-rating">○</div>
+                        <p>約30％削減。週1日分の余裕確保</p>
+                    </div>
+                    
+                    <div class="eval-card">
+                        <h4>責任バランス</h4>
+                        <div class="eval-rating">△</div>
+                        <p>法的責任は先生側に集中（要覚悟）</p>
+                    </div>
+                    
+                    <div class="eval-card">
+                        <h4>精神的負担</h4>
+                        <div class="eval-rating">◎◎</div>
+                        <p>顧客・請求ストレスからの解放</p>
+                    </div>
+                    
+                    <div class="eval-card">
+                        <h4>将来拡張性</h4>
+                        <div class="eval-rating">○</div>
+                        <p>案件増により年収向上が可能</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ⅸ. 結論 -->
+            <div class="section">
+                <div class="section-title">Ⅸ．結論（意思決定メモ）</div>
+                
+                <div class="conclusion-box">
+                    <h3>最終判断材料</h3>
+                    <ul>
+                        <li>報酬配分上は公平であり、固定報酬＋調査費100％＋安定回収により実質的な収入は現状を上回る。</li>
+                        <li>精神的ストレスと事務的負担が大幅に軽減される点が最大のメリット。</li>
+                        <li>一方で、行政対応・法令判断などの資格者責任はすべて先生に残るため、実務リスクは従来通り。</li>
+                        <li>よって本提案は「収入の増加＋精神的余裕＋リスク分担の明確化」を総合的に実現するプランといえる。</li>
+                    </ul>
+                </div>
+                
+                <div class="note">
+                    <strong>判断基準：</strong>「金額よりも、業務の安定と余裕を優先するかどうか」で最終決定するのが望ましい。
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
