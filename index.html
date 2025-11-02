@@ -14,8 +14,8 @@
         body {
             font-family: 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif;
             line-height: 1.8;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2d3748;
+            background: #f7fafc;
             padding: 20px;
         }
         
@@ -23,22 +23,24 @@
             max-width: 1200px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-radius: 2px;
             overflow: hidden;
         }
         
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #1a365d;
             color: white;
             padding: 40px 30px;
             text-align: center;
+            border-bottom: 4px solid #2c5282;
         }
         
         header h1 {
             font-size: 28px;
             font-weight: bold;
             margin-bottom: 10px;
+            letter-spacing: 0.5px;
         }
         
         .content {
@@ -48,7 +50,7 @@
         .section {
             margin-bottom: 40px;
             padding-bottom: 30px;
-            border-bottom: 2px solid #e0e0e0;
+            border-bottom: 1px solid #e2e8f0;
         }
         
         .section:last-child {
@@ -56,89 +58,125 @@
         }
         
         .section-title {
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            background: #2c5282;
             color: white;
             padding: 15px 20px;
             margin: -10px -10px 25px -10px;
-            border-radius: 8px;
+            border-radius: 2px;
             font-size: 20px;
             font-weight: bold;
+            border-left: 5px solid #3182ce;
         }
         
         .info-box {
-            background: #f8f9fa;
+            background: #edf2f7;
             padding: 20px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #3182ce;
             margin-bottom: 20px;
-            border-radius: 5px;
+            border-radius: 2px;
         }
         
         .info-box h3 {
-            color: #667eea;
+            color: #2c5282;
             margin-bottom: 10px;
             font-size: 16px;
+            font-weight: bold;
         }
         
         .info-box p {
             margin-bottom: 8px;
             line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-box li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #4a5568;
+        }
+        
+        .info-box li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3182ce;
+            font-weight: bold;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-radius: 2px;
             overflow: hidden;
+            border: 1px solid #e2e8f0;
         }
         
         th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #2c5282;
             color: white;
             padding: 15px;
             text-align: left;
             font-weight: bold;
             font-size: 14px;
+            border-right: 1px solid #3182ce;
+        }
+        
+        th:last-child {
+            border-right: none;
         }
         
         td {
             padding: 12px 15px;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
             font-size: 14px;
+            color: #4a5568;
+        }
+        
+        td:last-child {
+            border-right: none;
         }
         
         tr:nth-child(even) {
-            background: #f8f9fa;
+            background: #f7fafc;
         }
         
         tr:hover {
-            background: #e3f2fd;
-            transition: background 0.3s;
+            background: #edf2f7;
+            transition: background 0.2s;
         }
         
         .highlight-positive {
-            color: #28a745;
+            color: #276749;
             font-weight: bold;
         }
         
         .highlight-negative {
-            color: #dc3545;
+            color: #9b2c2c;
             font-weight: bold;
         }
         
         .highlight-neutral {
-            color: #ffc107;
+            color: #975a16;
             font-weight: bold;
         }
         
         .calculation {
-            background: #fff3cd;
+            background: #fefcbf;
             padding: 15px;
-            border-left: 4px solid #ffc107;
+            border-left: 4px solid #d69e2e;
             margin: 15px 0;
-            border-radius: 5px;
-            font-family: monospace;
+            border-radius: 2px;
+            font-family: 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif;
+            color: #744210;
         }
         
         .evaluation-grid {
@@ -150,39 +188,49 @@
         
         .eval-card {
             background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            border: 2px solid #cbd5e0;
+            border-radius: 2px;
             padding: 20px;
             transition: all 0.3s;
         }
         
         .eval-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #3182ce;
         }
         
         .eval-card h4 {
-            color: #667eea;
+            color: #2c5282;
             margin-bottom: 10px;
             font-size: 16px;
+            font-weight: bold;
         }
         
         .eval-rating {
             font-size: 24px;
             margin: 10px 0;
+            color: #2c5282;
+        }
+        
+        .eval-card p {
+            color: #4a5568;
+            font-size: 14px;
         }
         
         .conclusion-box {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: #2c5282;
             color: white;
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 2px;
             margin: 30px 0;
+            border-left: 5px solid #3182ce;
         }
         
         .conclusion-box h3 {
             font-size: 22px;
             margin-bottom: 15px;
+            font-weight: bold;
         }
         
         .conclusion-box ul {
@@ -194,6 +242,7 @@
             margin: 10px 0;
             padding-left: 25px;
             position: relative;
+            line-height: 1.7;
         }
         
         .conclusion-box li:before {
@@ -205,18 +254,150 @@
         }
         
         .note {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
+            background: #bee3f8;
+            border-left: 4px solid #3182ce;
             padding: 15px;
             margin: 15px 0;
-            border-radius: 5px;
+            border-radius: 2px;
             font-size: 14px;
+            color: #2c5282;
+        }
+        
+        .note strong {
+            color: #1a365d;
         }
         
         .arrow {
-            color: #667eea;
+            color: #2c5282;
             font-weight: bold;
             font-size: 18px;
+        }
+        
+        /* テーブルのレスポンシブ対応 */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+        
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                border-radius: 5px;
+            }
+            
+            header {
+                padding: 25px 20px;
+            }
+            
+            header h1 {
+                font-size: 20px;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .section {
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+            }
+            
+            .section-title {
+                font-size: 16px;
+                padding: 12px 15px;
+                margin: -5px -5px 20px -5px;
+            }
+            
+            .info-box {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .info-box h3 {
+                font-size: 14px;
+            }
+            
+            .info-box p {
+                font-size: 13px;
+            }
+            
+            table {
+                font-size: 12px;
+                min-width: 600px;
+            }
+            
+            th {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+            
+            td {
+                padding: 8px;
+                font-size: 12px;
+            }
+            
+            .calculation {
+                padding: 12px;
+                font-size: 13px;
+            }
+            
+            .evaluation-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .eval-card {
+                padding: 15px;
+            }
+            
+            .eval-card h4 {
+                font-size: 15px;
+            }
+            
+            .conclusion-box {
+                padding: 20px 15px;
+            }
+            
+            .conclusion-box h3 {
+                font-size: 18px;
+            }
+            
+            .conclusion-box li {
+                font-size: 14px;
+                margin: 8px 0;
+            }
+            
+            .note {
+                padding: 12px;
+                font-size: 13px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 15px;
+            }
+            
+            table {
+                font-size: 11px;
+                min-width: 500px;
+            }
+            
+            th, td {
+                padding: 6px;
+            }
+            
+            .eval-rating {
+                font-size: 20px;
+            }
         }
         
         @media print {
@@ -263,7 +444,7 @@
                 
                 <div class="info-box">
                     <h3>分配ルール</h3>
-                    <ul style="list-style: disc; padding-left: 25px;">
+                    <ul>
                         <li>調査費部分は<span class="highlight-positive">100％先生取り分</span>（ニューオ取り分なし）</li>
                         <li>申請報酬部分（残額）については、<strong>先生30％／ニューオ70％</strong></li>
                         <li>調査止まり案件（未申請案件）：8万円を<span class="highlight-positive">先生100％取り分</span>とし、ニューオは取り分なし</li>
@@ -276,6 +457,7 @@
             <div class="section">
                 <div class="section-title">Ⅱ．報酬・待遇条件（正確構造）</div>
                 
+                <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
@@ -322,6 +504,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
                 
                 <div class="calculation">
                     <span class="arrow">➡</span> 先生の取り分は「固定報酬＋調査費＋申請報酬30％」。ニューオは申請報酬部分の70％を取得。
@@ -332,6 +515,7 @@
             <div class="section">
                 <div class="section-title">Ⅲ．現状との比較（単価・収益面：一件当たり＋月合計）</div>
                 
+                <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
@@ -378,10 +562,12 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
                 
                 <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">▶ 月次試算（具体件数）</h3>
                 <p style="margin-bottom: 15px;">以下は旅館5件・民泊4件・調査止まり2件（合計11件）を想定した場合の比較結果。</p>
                 
+                <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
@@ -409,6 +595,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
                 
                 <div class="calculation">
                     <span class="arrow">➡</span> 統合後の実質取り分比率は <strong>先生55.5％：ニューオ44.5％</strong>。<br>
@@ -420,6 +607,7 @@
             <div class="section">
                 <div class="section-title">Ⅳ．業務負担と時間削減効果</div>
                 
+                <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
@@ -462,6 +650,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
                 
                 <div class="calculation">
                     <span class="arrow">➡</span> 全体で約30〜35％の工数削減（週1日分の余力創出）。
@@ -472,6 +661,7 @@
             <div class="section">
                 <div class="section-title">Ⅴ．責任分担とリスク構造</div>
                 
+                <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
@@ -514,6 +704,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
                 
                 <div class="calculation">
                     <span class="arrow">➡</span> 法的・専門責任はすべて先生に残る一方で、金銭・顧客管理リスクはニューオが負担。
@@ -524,6 +715,7 @@
             <div class="section">
                 <div class="section-title">Ⅵ．精神的負担・業務満足度の変化</div>
                 
+                <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
@@ -566,12 +758,14 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
             
             <!-- Ⅶ. 処理能力・将来性 -->
             <div class="section">
                 <div class="section-title">Ⅶ．処理能力・将来性</div>
                 
+                <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
@@ -608,6 +802,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
             
             <!-- Ⅷ. 総合評価 -->
